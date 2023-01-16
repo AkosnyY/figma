@@ -1,0 +1,44 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #F8F9FA;
+
+    .nav {
+        &__container {
+            display: flex;
+            justify-content: space-around;
+            font-family: roboto;
+
+        }
+
+        &__links {
+            text-decoration: none;
+            color: black;
+            margin-left: 25px;
+            h1{
+                font-family: roboto ;
+            
+
+
+            }
+        }
+
+
+        &__button {
+            text-align: center;
+            margin-top: 23px;
+
+            button {
+                background-color: #0D6EFD;
+                color: white;
+                border:none;
+                font-size: large;
+                font-family: roboto ;
+                border-radius: 4px;
+            }
+        }
+    }
+}

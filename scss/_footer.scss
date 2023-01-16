@@ -1,0 +1,33 @@
+.footer {
+    background-color: #D9D9D9;
+
+    ul {
+        padding-left: 0px;
+        margin: 10px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+           gap:4px
+        }
+
+       
+        li {
+            margin-top: 10px;
+            list-style: none;
+
+            a {
+                color: #0D6EFD;
+                text-decoration: none;
+
+            }
+        }
+    }
+
+    p {
+        color: rgba(0, 0, 0, 0.8);
+        margin-left: 10px;
+        font-weight: 600;
+        padding-bottom: 40px;
+        margin-bottom: 0px;
+    }
+
+}

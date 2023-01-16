@@ -1,0 +1,138 @@
+.main {
+    margin-top: 20px;
+
+    &__div {
+        display: grid;
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        article {
+            text-align: center;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-family: roboto;
+
+            i {
+                color: #0D6EFD;
+                font-size: 40px;
+
+                @media screen and (min-width:768px) {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    &__separation {
+        width: 80%;
+        height: 2px;
+        margin-left: 40px;
+        margin-top: 20px;
+        background-color: rgb(8, 6, 8)
+    }
+
+    section {
+        margin-top: 10px;
+
+        h2 {
+            text-align: center;
+            font-family: roboto;
+
+        }
+
+        .sections {
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: white;
+            padding-bottom: 20px;
+            @media screen and (min-width:1024px) {
+                margin-left:125px;
+                margin-right: 125px;
+            }
+
+            @media screen and (min-width:1024px) {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+
+
+            div {
+                text-align: center;
+
+
+                @media screen and (min-width:768px) {
+                    display: flex;
+                    justify-content: center;
+                    gap: 4px;
+                }
+
+            }
+
+            &__form__input {
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 5px;
+                padding: 8px 12px;
+                width: 50%;
+                background-color: #D9D9D9;
+                margin-top: 10px;
+
+                @media screen and (min-width:768px) {
+                    width: 30%;
+
+                }
+            }
+
+
+
+            textarea {
+                font-family: roboto;
+                background-color: #D9D9D9;
+                text-align: left !important;
+                font-size: 20px;
+                margin-left: 47px;
+                margin-top: 10px;
+                width: 145px;
+                border-radius: 4px;
+                text-align: center;
+                @media screen and (min-width:768px) {
+                    margin-left: 107px;
+                    padding-right: 304px;
+                }
+                 @media screen and (min-width:1024px) {
+                    margin-left: 98px;
+                    padding-right: 278px;
+                   
+
+                }
+
+            }
+
+
+            button {
+                background-color: #0D6EFD;
+                font-family: roboto;
+                color: white;
+                border: none;
+                font-size: 20px;
+                margin-left: 45px;
+                margin-top: 10px;
+                border-radius: 4px;
+                @media screen and (min-width:768px) {
+                    margin-left: 107px;
+                }
+                 @media screen and (min-width:1024px) {
+                    margin-left: 98px;
+
+                }
+            }
+        }
+    }
+}
