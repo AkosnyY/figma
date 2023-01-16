@@ -131,6 +131,16 @@ header .form__button {
   margin-top: 20px;
   background-color: rgb(8, 6, 8);
 }
+@media screen and (min-width: 768px) {
+  .main__separation {
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__separation {
+    margin-left: 120px;
+  }
+}
 .main section {
   margin-top: 10px;
 }
@@ -144,7 +154,7 @@ header .form__button {
   background-color: white;
   padding-bottom: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main section .sections {
     margin-left: 125px;
     margin-right: 125px;

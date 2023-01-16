@@ -36,7 +36,15 @@
         height: 2px;
         margin-left: 40px;
         margin-top: 20px;
-        background-color: rgb(8, 6, 8)
+        background-color: rgb(8, 6, 8);
+
+        @media screen and (min-width:768px) {
+            margin-left:80px;
+        }
+
+        @media screen and (min-width:1024px) {
+            margin-left: 120px;
+        }
     }
 
     section {
@@ -53,7 +61,7 @@
             margin-right: 50px;
             background-color: white;
             padding-bottom: 20px;
-            @media screen and (min-width:1024px) {
+            @media screen and (min-width:768px) {
                 margin-left:125px;
                 margin-right: 125px;
             }
