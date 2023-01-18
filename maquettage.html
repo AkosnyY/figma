@@ -25,7 +25,7 @@
         <h2>lorem ipsum dolor sit amet,
             concesteur adipiscing elit </h2>
         <form class="form" action="#">
-            <input class=form__input type="text" Placeholder="Email Address">
+            <input class=form__input type="text" id="email" Placeholder="Email Address">
             <button class=form__button type="submit">Submit</button>
         </form>
     </header>
@@ -33,7 +33,7 @@
         <div class="main__div">
             <article>
                 <i class="fa fa-puzzle-piece"></i>
-                <h3 class="h3">Lorem ipsum</h3>
+                <h3>Lorem ipsum</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed rhoncus nisi. Sed finibus
                     feugiat
                     venenatis. Nullam gravida pretium efficitur.</p>
@@ -56,16 +56,40 @@
         <div class="main__separation"></div>
         <section>
             <h2>Contact us</h2>
-            <form class="sections" action="#">
+            <form class="sections" action="#" id="contactForm">
                 <div>
-                    <input class="sections__form__input" type="text" Placeholder="Fristname">
-                    <input class="sections__form__input" type="text" Placeholder="Lastname">
+
+                    <div class="input__div">
+                        <input class="sections__form__input" type="text" id="firstName" Placeholder="Fristname">
+                        <label class="error-message" for="firstName" id="firstNameError">Veuillez renseigner votre
+                            prénom.</label>
+                    </div>
+
+
+                    <div class="input__div">
+                        <input class="sections__form__input" type="text" id="lastName" Placeholder="lastname">
+                        <label class="error-message" for="lastName" id="lastNameError">Veuillez renseigner votre
+                            nom.</label>
+                    </div>
                 </div>
                 <div>
-                    <input class="sections__form__input" type="text" Placeholder="Email Address">
-                    <input class="sections__form__input" type="text" Placeholder="Phone Number">
+
+                    <div class="input__div">
+                        <input class="sections__form__input" type="text" id="Email" Placeholder="Email Address">
+                        <label class="error-message" for="email" id="emailError">Veuillez renseigner un email
+                            valide.</label>
+                    </div>
+                    <div class="input__div">
+
+                        <input class="sections__form__input" type="text" id="phone" Placeholder="Phone Number">
+                        <label class="error-message" for="phone" id="phoneError">Veuillez renseigner un numéro de
+                            téléphone
+                            valide.</label>
+                    </div>
+
                 </div>
-                <textarea name="messageInput" id="messageInput" Placeholder="type your message"></textarea>
+                <textarea name="messageInput" id="message" Placeholder="type your message"></textarea>
+                <label class="error-message" for="message" id="messageError">Veuillez renseigner votre message.</label>
                 <br>
                 <button type="submit">submit</button>
             </form>
@@ -81,6 +105,10 @@
         </ul>
         <p>Website 2022 - All Rights Reserved</p>
     </footer>
+
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 
