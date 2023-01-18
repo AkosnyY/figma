@@ -19,6 +19,8 @@ contactForm.addEventListener('submit', (event) => {
 
     }
 
+    console.log(formData)
+
     const errors = {
         firstName: false,
         lastName: false,
@@ -42,55 +44,51 @@ contactForm.addEventListener('submit', (event) => {
 
 
 
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
-        const emailRegex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm;
-        const nameRegex = /^[a-zA-Z ]+$/
-        const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/
+    const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    const nameRegex = /^[a-zA-Z ]+$/
+    const phoneRegex = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/
 
 
 
-        if (!formData.firstName || !nameRegex.test(formData.firstName)) {
-            errors.firstName = true;
-            firstNameError.style.display = 'block';
-        }
-        if (!formData.lastName || !nameRegex.test(formData.lastName)) {
-            errors.lastName = true;
-            lastNameError.style.display = 'block';
-        }
-        if (!formData.email || !emailRegex.test(formData.email)) {
-            errors.email = true;
-            emailError.style.display = 'block';
-        }
-        if (!formData.phone || !phoneRegex.test(formData.phone)) {
-            errors.phone = true;
-            phoneError.style.display = 'block';
-        }
-        if (!formData.message || formData.message.length < 4) {
-            errors.message = true;
-            messageError.style.display = 'block';
-        }
+    if (!formData.firstName || !nameRegex.test(formData.firstName)) {
+        errors.firstName = true;
+        firstNameError.style.display = 'block';
+    }
+    if (!formData.lastName || !nameRegex.test(formData.lastName)) {
+        errors.lastName = true;
+        lastNameError.style.display = 'block';
+    }
+    if (!formData.email || !emailRegex.test(formData.email)) {
+        errors.email = true;
+        console.log(formData.email)
+        emailError.style.display = 'block';
+    }
+    if (!formData.phone || !phoneRegex.test(formData.phone)) {
+        errors.phone = true;
+        phoneError.style.display = 'block';
+    }
+    if (!formData.message || formData.message.length < 4) {
+        errors.message = true;
+        messageError.style.display = 'block';
     }
 
 
     if (!Object.values(errors).includes(true)) {
         console.log(formData)
+        axios.post(' http://212.83.176.255:3030/contact', formData)
+
+            .then((response) => {
+                console.log(response.data);
+            })
+
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
 
 
 
+
 })
-
-
-if (!error) {
-    axios.post(' http://212.83.176.255:3030/contact', userData)
-
-        .then((response) => {
-            console.log(response.data);
-        })
-
-        .catch((error) => {
-            console.error(error);
-        });
-}
 
