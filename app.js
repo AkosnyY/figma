@@ -18,9 +18,7 @@ contactForm.addEventListener('submit', (event) => {
         message: messageInput.value,
 
     }
-
-    console.log(formData)
-
+    
     const errors = {
         firstName: false,
         lastName: false,
@@ -60,7 +58,6 @@ contactForm.addEventListener('submit', (event) => {
     }
     if (!formData.email || !emailRegex.test(formData.email)) {
         errors.email = true;
-        console.log(formData.email)
         emailError.style.display = 'block';
     }
     if (!formData.phone || !phoneRegex.test(formData.phone)) {
