@@ -10,6 +10,23 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .carousel {
+            margin: 0 auto;
+            width: 800px;
+            height: 500px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        #carouselContent {
+            width: 700px;
+        }
+
+        #carouselContent > img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,6 +69,11 @@
                     feugiat
                     venenatis. Nullam gravida pretium efficitur.</p>
             </article>
+        </div>
+        <div class="carousel">
+            <button id="arrowLeft">&lt;</button>
+            <div id="carouselContent"></div>
+            <button id="arrowRight">&gt;</button>
         </div>
         <div class="main__separation"></div>
         <section>
